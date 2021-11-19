@@ -85,7 +85,7 @@ nav.navbar {
   text-align: center;
   clear: both;
   color: #5629e7;
-  font-size: .9rem;
+  font-size: 0.9rem;
   margin: 10px;
 }
 
@@ -100,4 +100,31 @@ nav.navbar {
   float: left;
   background-color: #ecebeb;
   clear: both;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .message-sender form button {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .messages-container,
+  .message-sender {
+    margin: 20px 10px;
+  }
+  .message-sender form button {
+    width: 45%;
+    border-radius: 10px;
+    font-size: 15px;
+  }
+  .message-sender form input {
+    border-radius: 10px;
+    font-size: 15px;
+  }
 }
