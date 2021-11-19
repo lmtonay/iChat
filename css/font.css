@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "Euclid";
+  src: url(../media/fonts/font_regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Euclid";
+  src: url(../media/fonts/font_italic.ttf);
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Euclid";
+  src: url(../media/fonts/font_medium.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Euclid";
+  src: url(../media/fonts/font_medium_italic.ttf);
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Euclid";
+  src: url(../media/fonts/font_light.ttf);
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Euclid";
+  src: url(../media/fonts/font_light_italic.ttf);
+  font-weight: 200;
+  font-style: italic;
+}
