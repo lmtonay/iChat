@@ -1,4 +1,4 @@
-const socket = io('http://localhost:8000');
+const socket = io('https://stark-stream-53300.herokuapp.com');
 
 const form = document.getElementById('text-form');
 const message = document.getElementById('message-input');
