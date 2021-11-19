@@ -14,15 +14,17 @@ const append = (message, position, type) => {
   if (position === 'left') {
     audio.play();
   }
+  messageContainer.scrollTop = messageContainer.scrollHeight;
 };
 
 const userName = prompt('Enter your name: ');
 if (userName === null || userName === '') {
   alert('You must enter a name!');
   window.location.reload();
+} else {
+  document.querySelector('#user-name').innerText = userName;
+  socket.emit('new-user-joined', userName);
 }
-document.querySelector('#user-name').innerText = userName;
-socket.emit('new-user-joined', userName);
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
