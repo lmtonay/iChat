@@ -3,7 +3,9 @@ const socket = io('https://stark-stream-53300.herokuapp.com');
 const form = document.getElementById('text-form');
 const message = document.getElementById('message-input');
 const messageContainer = document.querySelector('.messages-container');
-const audio = new Audio('media/audios/bell.mp3');
+const bell = new Audio('media/audios/bell.mp3');
+const join = new Audio('media/audios/join.mp3');
+const leave = new Audio('media/audios/leave.mp3');
 
 const append = (message, position, type) => {
   const messageElement = document.createElement('div');
@@ -11,9 +13,6 @@ const append = (message, position, type) => {
   messageElement.classList.add(type);
   messageElement.classList.add(position);
   messageContainer.append(messageElement);
-  if (position === 'left') {
-    audio.play();
-  }
   messageContainer.scrollTop = messageContainer.scrollHeight;
 };
 
@@ -38,12 +37,15 @@ form.addEventListener('submit', (e) => {
 
 socket.on('user-joined', (name) => {
   append(`${name} joined the chat`, 'center', 'info-message');
+  join.play();
 });
 
 socket.on('receive', (data) => {
   append(`<b>${data.name}</b>: ${data.message}`, 'left', 'message');
+  bell.play();
 });
 
 socket.on('left', (name) => {
   append(`${name} left the chat`, 'center', 'info-message');
+  leave.play();
 });
