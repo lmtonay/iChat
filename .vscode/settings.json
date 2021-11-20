@@ -5,4 +5,5 @@
     "eslint.validate": [
         "javascript"
     ],
+    "minify.minifyExistingOnSave": false,
 }
