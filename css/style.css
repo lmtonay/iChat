@@ -25,7 +25,6 @@ nav.navbar {
 }
 
 .app-container {
-  height: calc(100vh - 90px);
   max-width: 1000px;
   margin: auto;
 }
@@ -42,7 +41,6 @@ nav.navbar {
 
 .message-sender {
   margin: 20px 50px;
-  height: 10vh;
 }
 
 .message-sender form {
